@@ -1,51 +1,153 @@
-# Calculate (Native Android Edition) ⚡
+<div align="center">
 
-A high-performance, ultra-smooth, native Android calculator by **CodeStitcher**, built with **Kotlin** and **Jetpack Compose (Material 3)**.
+# Calculate ⚡
+### *The Ultra-Sleek, 120 FPS Scientific Calculator & World Currency Converter for Android*
 
-Designed for peak elegance, minimal aesthetic, instant cold startup, 120 FPS hardware acceleration, spring physics, tactile haptic feedback, and a cinematic studio brand intro.
+[![Android CI](https://github.com/MustafijRatul/Calculate/actions/workflows/android.yml/badge.svg)](https://github.com/MustafijRatul/Calculate/actions/workflows/android.yml)
+[![Kotlin](https://img.shields.io/badge/Kotlin-2.0.0-7F52FF?style=flat&logo=kotlin&logoColor=white)](https://kotlinlang.org)
+[![Jetpack Compose](https://img.shields.io/badge/UI-Jetpack%20Compose%20M3-4285F4?style=flat&logo=android&logoColor=white)](https://developer.android.com/jetpack/compose)
+[![Platform](https://img.shields.io/badge/Platform-Android%208.0%2B%20(API%2026%2B)-3DDC84?style=flat&logo=android&logoColor=white)](https://developer.android.com)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Engineered by](https://img.shields.io/badge/Engineered%20by-CodeStitcher-000000?style=flat&logo=github)](https://github.com/MustafijRatul)
+
+<p align="center">
+  <b>A production-grade, ultra-fluid Android application combining precision scientific mathematics, real-time daily currency exchange, unit conversion, and a cinematic studio brand intro.</b>
+</p>
+
+</div>
 
 ---
 
-## 🌟 Key Features
+## 📑 Table of Contents
+- [Key Highlights](#-key-highlights)
+- [Deep Dive Features](#-deep-dive-features)
+  - [1. Cinematic Studio Intro](#1--cinematic-studio-intro)
+  - [2. Minimalist Scientific & Standard Calculator](#2--minimalist-scientific--standard-calculator)
+  - [3. Real-Time World Currency Converter](#3--real-time-world-currency-converter)
+  - [4. Multi-Category Unit Converter](#4--multi-category-unit-converter)
+  - [5. Dual Theme System](#5--dual-theme-system)
+- [Project Architecture](#-project-architecture)
+- [Tech Stack](#-tech-stack)
+- [Getting Started & Build Instructions](#-getting-started--build-instructions)
+- [Contributing](#-contributing)
+- [License](#-license)
 
-### 1. 🎬 CodeStitcher Cinematic Studio Intro
-- **Zero Cold-Start Flicker**: Android OS window and splash themes configured in pure pitch-black (`#000000`).
-- **100% Native Compose GPU Canvas**: 120 FPS hardware-accelerated vector drawing of the CodeStitcher capsule mark and typography.
-- **Game-Studio Polish**: 1-loop (3.2s) outline tracing and fill with tap-to-skip support and seamless 500ms crossfade transition into the calculator.
+---
 
-### 2. 🧮 Professional Scientific & Standard Calculator
-- **Minimalist, Elegant Top Bar**: Clean utility icons for quick access to history, units, currency, and scientific mode without distracting branding or blinking dots.
-- **Natural Bottom-Anchored Keypad**: Perfectly proportioned tactile buttons brought down to the lower screen area for effortless, comfortable one-handed thumb reach.
-- **Smart Adaptive Display Card**: Expands smoothly to fill vertical space with crisp, auto-scrolling single-line expressions and instant live result preview.
-- **Casio fx-991EX Scientific Keypad**: Expandable scientific mode with SHIFT/2nd toggle supporting:
-  - Trigonometry & Inverse Trig (`sin`, `cos`, `tan`, `sin⁻¹`, `cos⁻¹`, `tan⁻¹`)
-  - Logarithms & Exponentials (`ln`, `log`, `eˣ`, `10ˣ`, `xʸ`, `√`, `³√`, `ⁿ√`)
-  - Permutations & Combinations (`nPr`, `nCr`, `MOD`)
-  - Factorials, Absolute values, Powers (`x!`, `|x|`, `x²`, `x³`, `x⁻¹`)
-  - Constants & Answer Memory (`π`, `e`, `ANS`)
-- **Calculation History Sheet**: Persistently saves calculations so you can recall past equations with a single tap.
+## ⚡ Key Highlights
+- **100% Native Kotlin & Jetpack Compose (Material 3)**: Zero legacy hybrid overhead; guaranteed 120 FPS / 60 FPS silky smooth interactions.
+- **Zero Cold-Start Lag**: OS-level pitch-black theme configuration eliminating any gray/ash screen flash.
+- **Casio fx-991EX ClassWiz Mathematical Engine**: Full scientific capabilities with robust operator precedence and multi-digit precision.
+- **Offline-First & Daily Live Currency Sync**: Seamless daily exchange rates fetched from open market APIs with persistent local caching.
+
+---
+
+## 🚀 Deep Dive Features
+
+### 1. 🎬 Cinematic Studio Intro
+- **Vector Outline Tracing**: Custom hardware-accelerated Compose GPU Canvas dynamically traces the CodeStitcher mark and typography.
+- **1-Loop Polish (3.2s)**: Traces capsule contours, applies crisp white fill, and cuts the inverted black stitch before seamlessly transitioning into the calculator.
+- **Tap-To-Skip**: Instant bypass available at any moment for immediate calculations.
+
+### 2. 🧮 Minimalist Scientific & Standard Calculator
+- **Bottom-Anchored Ergonomics**: Keypad naturally aligned to the lower screen edge for comfortable one-handed thumb reach with zero floating black gaps.
+- **Adaptive OLED Display**: Expands vertically to absorb available space with live preview evaluations and single-line expression formatting.
+- **Casio fx-991EX Scientific Keypad**:
+  - **Trigonometric Functions**: $\sin$, $\cos$, $\tan$, $\sin^{-1}$, $\cos^{-1}$, $\tan^{-1}$ (supporting Degree/Radian modes).
+  - **Exponentials & Logarithms**: $\ln$, $\log_{10}$, $e^x$, $10^x$, $x^y$, $\sqrt{x}$, $\sqrt[3]{x}$, $\sqrt[n]{x}$.
+  - **Discrete Mathematics**: Permutations ($nPr$), Combinations ($nCr$), Modulo ($MOD$), Factorials ($x!$).
+  - **Constants & History**: $\pi$, $e$, Answer recall ($ANS$), and full persistent calculation history bottom sheet.
 
 ### 3. 💱 Real-Time World Currency Converter
-- **70+ World Countries & Currencies**: Includes official Unicode high-resolution country flag emojis (`🇧🇩`, `🇺🇸`, `🇪🇺`, `🇬🇧`, `🇸🇦`, `🇮🇳`, `🇯🇵`, `🇦🇪`, etc.).
-- **Alphabetical A–Z Grouping**: Countries cleanly grouped with minimal, elegant circular badge headers and hairline dividers.
-- **Daily Auto-Syncing Exchange Rates**: Automatically fetches live market rates once a day via open exchange API, with local caching for full offline operation.
-- **Instant Search**: Real-time filtering by country name, currency name, or currency code.
+- **70+ Global Currencies**: Features high-resolution official Unicode country flags (e.g., 🇧🇩 Bangladesh, 🇺🇸 United States, 🇪🇺 European Union, 🇬🇧 United Kingdom, 🇸🇦 Saudi Arabia, 🇮🇳 India, 🇯🇵 Japan, 🇦🇪 UAE).
+- **Alphabetical A–Z Grouping**: Clean circular letter badges and hairline dividers for rapid visual scanning.
+- **Real-Time Live Search**: Instant filtering by country name, currency name, or 3-letter currency code.
+- **Daily Auto-Sync Engine**: Auto-checks and updates rates once every 24 hours via `open.er-api.com` with zero impact on startup time.
 
 ### 4. 📏 Multi-Category Unit Converter
-- Supports Length, Weight, Temperature, and Speed with precise formula conversions.
+- Comprehensive unit conversions covering **Length**, **Weight**, **Temperature**, and **Speed** with instant two-way synchronization.
 
-### 5. 🎨 Minimalist Dual Theme System
-- One-tap toggle between **Deep OLED Dark Mode** and **Clean Minimalist Light Mode**.
-- Custom spring-physics tactile buttons with responsive haptic feedback.
+### 5. 🎨 Dual Theme System
+- **Deep OLED Dark Mode**: Power-efficient true blacks (`#000000` / `#0F1216`) with glowing cyan accents.
+- **Studio Light Mode**: Clean, high-contrast minimalist white interface.
+- **Tactile Haptic Feedback**: Customized subtle haptic vibrations on every keypress.
 
 ---
 
-## 📱 How to Run & Build
-1. Open **Android Studio**.
-2. Select **File -> Open** and choose `CalcPro`.
-3. Press **Run** (`Shift + F10`) to launch on your Android device or emulator!
-4. Or build an APK via terminal:
-   ```powershell
-   ./gradlew assembleDebug
-   ```
-   The APK will be generated at `app/build/outputs/apk/debug/app-debug.apk`.
+## 🏛 Project Architecture
+
+```
+Calculate/
+├── .github/workflows/           # Automated GitHub Actions CI/CD pipeline
+├── app/
+│   ├── src/main/
+│   │   ├── AndroidManifest.xml  # Permissions and black splash theme declarations
+│   │   ├── java/codestitcher/calcpro/
+│   │   │   ├── MainActivity.kt                  # Compose root with crossfade navigation
+│   │   │   ├── calculation/
+│   │   │   │   └── ExpressionEvaluator.kt       # Casio fx-991EX math parser & evaluator
+│   │   │   ├── data/
+│   │   │   │   ├── CurrencyRepository.kt        # 70+ countries & daily auto-sync engine
+│   │   │   │   └── HistoryRepository.kt         # Persistent equation history
+│   │   │   ├── navigation/
+│   │   │   │   └── Screen.kt                    # Type-safe navigation routes
+│   │   │   ├── ui/
+│   │   │   │   ├── components/                  # Reusable CalculatorButton & TopAppBar
+│   │   │   │   ├── screens/                     # Calculator, Currency, Units, Splash
+│   │   │   │   ├── theme/                       # Color, Type, and Material3 Theme
+│   │   │   │   └── util/                        # Haptic feedback managers
+│   │   └── res/                                 # Drawables, mipmaps, and themes
+│   └── build.gradle.kts                         # App module configuration
+├── build.gradle.kts                             # Top-level build configuration
+├── gradle.properties                            # Memory tuning & JVM arguments
+└── README.md                                    # Project documentation
+```
+
+---
+
+## 🛠 Tech Stack
+| Component | Technology |
+|---|---|
+| **Language** | Kotlin 2.0+ |
+| **UI Framework** | Jetpack Compose (Material 3) |
+| **Animation Engine** | Compose GPU Canvas & PathMeasure |
+| **Asynchronous Programming** | Kotlin Coroutines & Flow |
+| **Networking** | Standard Android `HttpURLConnection` + JSON |
+| **Storage** | Android `SharedPreferences` |
+| **Build Tool** | Gradle 8.7 with Kotlin DSL |
+| **Minimum SDK** | API 26 (Android 8.0 Oreo) |
+| **Target SDK** | API 34 (Android 14 UpsideDownCake) |
+
+---
+
+## 💻 Getting Started & Build Instructions
+
+### Prerequisites
+- Android Studio Iguana (2023.2.1) or newer
+- JDK 21 installed
+
+### Build via Command Line
+```powershell
+# Clone the repository
+git clone https://github.com/MustafijRatul/Calculate.git
+cd Calculate
+
+# Assemble Debug APK
+./gradlew assembleDebug
+```
+The compiled output will be generated at:
+`app/build/outputs/apk/debug/app-debug.apk`
+
+---
+
+## 🤝 Contributing
+Contributions are always welcome! Feel free to review [CONTRIBUTING.md](CONTRIBUTING.md), open an issue, or submit a pull request.
+
+---
+
+## 📄 License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+<div align="center">
+  <sub>Engineered with precision by <b>CodeStitcher</b></sub>
+</div>
